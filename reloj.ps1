@@ -49,22 +49,22 @@ function iniciarReloj([int]$hora, [int]$minutos, [int]$segundos){
     [string]$cadena_min = agregarCero $minutos
     [string]$cadena_seg = agregarCero $segundos
 
-    #
+    #escribe la cadena de tiempo
     Write-Host $cadena_hora":"$cadena_min":"$cadena_seg
 
-    #
+    #se aplica la función sumar el tiempo
     $horaActual = sumarTiempo $hora $minutos $segundos
 
-    #
+    #espera un segundo
     Start-Sleep -s 1
 
-    #
+    #se inicia la función que inicia el reloj
     iniciarReloj $horaActual["hora"] $horaActual["minutos"] $horaActual["segundos"]
 }
 
 #INICIO DEL SCRIPT
 
-#
+#se ponen los parámetros a 0
 [int]$hora = 0
 [int]$minutos = 0
 [int]$segundos = 0
@@ -81,6 +81,6 @@ do{
 
 while( ($hora -lt 0 -or $hora -gt 23) -or ($minutos -lt 0 -or $minutos -gt 59) -or ($segundos -lt 0 -or $segundos -gt 59) )
 
-# Iniciam rellotge
+# Iniamos el reloj
 iniciarReloj $hora $minutos $segundos
 
