@@ -83,4 +83,3 @@ while( ($hora -lt 0 -or $hora -gt 23) -or ($minutos -lt 0 -or $minutos -gt 59) -
 
 # Iniamos el reloj
 iniciarReloj $hora $minutos $segundos
-
